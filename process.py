@@ -5,7 +5,7 @@ from playwright.sync_api import sync_playwright
 from scraper import run
 
 orig = "Guadalajara"
-dest = "Mexico City"
+dest = "Tokyo"
 
 base_dir = "Ryokou"
 full_path = os.path.join(base_dir, dest)
@@ -13,7 +13,7 @@ if not os.path.exists(full_path):
     os.makedirs(full_path)
 
 # Itinerario
-sched = [orig, dest, (datetime.now() + timedelta(days=1)).strftime('%m-%d-%Y'), '01-01-2025']
+sched = [orig, dest, (datetime.now() + timedelta(days=1)).strftime('%m-%d-%Y'), '11-11-2025']
 depart = datetime.strptime(sched[2], '%m-%d-%Y')
 
 # Iterar hasta 300 días desde mañana
@@ -22,7 +22,7 @@ for departure_days in range(1, 300):
     sched[2] = depart_date.strftime('%m-%d-%Y')
     
     # 14 a 31 días para la fecha de retorno
-    for return_offset in [15, 31]:
+    for return_offset in [15,22,29,36]:
         return_date = depart_date + timedelta(days=return_offset)
         sched[3] = return_date.strftime('%m-%d-%Y')
         
