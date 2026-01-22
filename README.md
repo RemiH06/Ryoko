@@ -9,16 +9,15 @@
 ██║  ██║   ██║   ╚██████╔╝██║  ██╗╚██████╔╝
 ╚═╝  ╚═╝   ╚═╝    ╚═════╝ ╚═╝  ╚═╝ ╚═════╝ 
 
-       by Hex (@RemiH06)          version 1.1
+       by Hex (@RemiH06)          version 1.2
 ```
 
 ![Maintained](https://img.shields.io/badge/Maintained%3F-yes-green.svg?style=for-the-badge)
 
 ### General Description
 Main functions taken from https://dev.to/chukhraiartur/scrape-google-flights-with-python-4dln
-```diff
-- This project has not been concluded, it works tho
-```
+The scraper automation and the dataset maker work pretty good. 
+Using the Guadalajara-Tokyo dataset, created a model that could predict flight prices.
 
 ## Installation
 
@@ -32,7 +31,4 @@ Main functions taken from https://dev.to/chukhraiartur/scrape-google-flights-wit
 - Scrapes flights
 - Unit: individually scraping, just informations with specific params
 - Process: massive scraping, saves info with pandas in an excel file so it can be analyzed later
-
-## Future Features
-
-- SQL Options
+- Within predict.ipynb there are models that can help predicting flight prices.
